@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+/* ---Reset--- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---Whole Doc--- */
+html, body{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: #b98c10;
+}
+
+/* ---Navigation Bar--- */
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fcfc00;
+    padding: 5px 0;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: #575252;
+}
+
+/* Logo */
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #575252;
+}
+
+.logo span{
+    background: #fff;
+    color: #575252;
+    padding: 0 5px;
+    animation: anim1 5s infinite ease-in forwards;
+}
+
+/* Animation */
+@keyframes anim1{
+    to{
+        transform: rotateX(360deg);
+    }
+}
+
+/* Menu Bar */
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.92rem;
+    z-index: 3;
+    transition: all 0.4s ease-in;
+}
+
+.menu > li{
+    margin: 0 5px;
+}
+
+.menu > li > a{
+    padding: 10px 15px;
+}
+
+.menu .item{
+    position: relative;
+}
+
+.menu .item > a{
+    position: relative;
+}
+
+.menu .item > a > i{
+    position: absolute;
+    top: 32%;
+    left: 90%;
+    transition: all 0.3s ease-in;
+}
+
+.menu .item:hover > a > i{
+    transform: rotate(-90deg);
+}
+
+/* Sub Menus */
+.menu .submenu1,
+.submenu1 .submenu2a,
+.submenu1 .submenu2b,
+.submenu2b .submenu3{
+    width: 130px;
+    position: absolute;
+    top: 100%;
+    background: yellow;
+    font-size: 0.7rem;
+    display: none;
+}
+
+.menu .submenu1{
+    margin-top: 9px;
+}
+
+.submenu1 > li > a,
+.submenu2a > li > a,
+.submenu2b > li > a,
+.submenu3 > li > a{
+    display: block;
+    padding: 15px 15px;
+}
+
+.submenu1 > li > a:hover,
+.submenu2a > li > a:hover,
+.submenu2b > li > a:hover,
+.submenu3 > li > a:hover{
+    background: #999595;
+}
+
+.menu > li:hover .submenu1,
+.submenu1 > li:hover .submenu2a,
+.submenu1 > li:hover .submenu2b,
+.submenu2b > li:hover .submenu3{
+    display: block;
+}
+
+.submenu1 .submenu2a,
+.submenu1 .submenu2b,
+.submenu2b .submenu3{
+    top: 0;
+    left: 100%; 
+}
+
+/* Hamburger */
+nav input[type="checkbox"]{
+    display: none;
+}
+
+nav > label{
+    position: absolute;
+    top: 16px;
+    right: 5%;
+    font-size: 1.3rem;
+    z-index: 5;
+    color: #575252;
+    cursor: pointer;
+    display: none;
+}
+
+/* ---Hero Text--- */
+.text{
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* ---Responsive--- */
+@media(max-width:742px){
+    /* ---Navigation Bar--- */
+    nav{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    /* Hamburger */
+    nav > label:nth-child(3){
+        display: block;
+    }
+
+    /* Logo */
+    .logo{
+        padding: 10px 0;
+    }
+
+    /* Menu Bar */
+    .menu{
+        position: absolute;
+        width: 100vw;
+        overflow-x: hidden;
+        flex-direction: column;
+        padding: 20px 0;
+        top: 56px;
+        left: -100%;
+        background: yellow;
+        transition: all 0.4s ease-in;
+    }
+
+    .menu > li{
+        margin: 20px 0;
+    }
+
+    .menu > li > a{
+        padding: 8px 80px;
+    }
+
+    .menu .submenu1,
+    .submenu1 .submenu2a,
+    .submenu1 .submenu2b,
+    .submenu2b .submenu3{
+        width: 116px;
+        position: relative;
+        left: 33%;
+    }
+
+    .menu .submenu1{
+        margin-top: 12px;
+    }
+
+    .menu > li:hover > a{
+        background: #999595;
+    }
+
+    .submenu1 > li > a,
+    .submenu2a > li > a,
+    .submenu2b > li > a,
+    .submenu3 > li > a{
+        padding: 10px 15px;
+    }
+
+    /* Display Menu */
+    #menu1:checked ~ .menu{
+        left: 0;
+    }
+
+    #menu1:checked ~ label:nth-child(4){
+        display: block;
+    }
+
+    #menu1:checked ~ label:nth-child(3){
+        display: none;
+    }
+
+    /* ---Hero text--- */
+    .text{
+        font-size: 1.6rem;
+    }
+
+}
+
+

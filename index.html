@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Level Responsive Nav Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+   <nav>
+       <!-- Logo -->
+       <h1 class="logo">Bio <span>Inside</span></h1>
+       <!-- Hamburger Menu -->
+       <input type="checkbox" name="" id="menu1">
+       <label for="menu1">&#9776</label>
+       <label for="menu1">&#x2716</label>
+
+       <!-- Menu Bar -->
+       <ul class="menu">
+        <li class="item">
+                <a href="#">Products<i class="fas fa-caret-down"></i></a>
+                <!-- Sub Menu 1 -->
+                <ul class="submenu1">
+                    <li><a href="#">Televisions</a></li>
+                    <li><a href="#">Mobiles</a></li>
+                    <li><a href="#">Tablets</a></li>
+                </ul>
+           </li>
+           <li class="item">
+                <a href="#">Services<i class="fas fa-caret-down"></i></a>
+                <!-- Sub Menu 1 -->
+                <ul class="submenu1">
+                    <li class="item">
+                        <a href="#">UI/UX<i class="fas fa-caret-down"></i></a>
+                        <!-- Sub Menu 2 -->
+                        <ul class="submenu2a">
+                            <li><a href="#">UI/UX Design</a></li>
+                            <li><a href="#">Theme Design</a></li>
+                            <li><a href="#">Concept Design</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="item">
+                        <a href="#">Development<i class="fas fa-caret-down"></i></a>
+                        <!-- Sub Menu 2 -->
+                        <ul class="submenu2b">
+                            <li><a href="#">Front End</a></li>
+                            <li class="item">
+                                <a href="#">Back End<i class="fas fa-caret-down"></i></a>
+                                <!-- Sub Menu 3 -->
+                                <ul class="submenu3">
+                                    <li><a href="#">Java</a></li>
+                                    <li><a href="#">Python</a></li>
+                                    <li><a href="#">C+++</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Logo</a></li>
+                    <li><a href="#">Graphic</a></li>
+                </ul> 
+           </li>
+           <li><a href="#">About Us</a></li>
+           <li><a href="#">Contact Us</a></li>
+       </ul>
+   </nav>
+
+   <div class="text">
+       <h1>Multi Level Responsive Navigation Menu!</h1>
+   </div>
+</body>
+</html>
